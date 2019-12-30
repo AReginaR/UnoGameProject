@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseMoved="#mouseMoved" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.GameTableController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/fon.jpg" />
+            </image>
+        </ImageView>
+        <BorderPane prefHeight="600.0" prefWidth="800.0">
+            <center>
+                <AnchorPane fx:id="CenterField" prefHeight="400.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="cardOnTable" fitHeight="100.0" fitWidth="72.0" layoutX="367.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="messageLabel" layoutX="14.0" layoutY="369.0" />
+                    </children>
+                </AnchorPane>
+            </center>
+            <top>
+                <HBox prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" />
+                        <AnchorPane fx:id="PlayerUpDeck" prefHeight="100.0" prefWidth="400.0" />
+                        <Pane prefHeight="100.0" prefWidth="100.0" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="100.0" right="100.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </top>
+            <bottom>
+                <HBox prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0">
+                            <children>
+                                <Button fx:id="reloadButton" layoutX="4.0" layoutY="11.0" mnemonicParsing="false" onAction="#skipButtonOnAction" prefHeight="78.0" prefWidth="90.0" text="Пропустить" visible="true">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin></Pane>
+                        <AnchorPane fx:id="PlayerBottomDeck" prefHeight="100.0" prefWidth="400.0" />
+                        <Pane prefHeight="100.0" prefWidth="100.0">
+                            <children>
+                                <Button fx:id="drawButton" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#drawButtonOnAction" prefHeight="70.0" prefWidth="70.0" text="ВЗЯТЬ КАРТУ" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin></Pane>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="100.0" right="100.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </bottom>
+            <!--<right>-->
+                <!--<VBox prefHeight="400.0" prefWidth="100.0" BorderPane.alignment="CENTER">-->
+                    <!--<children>-->
+                        <!--<AnchorPane fx:id="PlayerRightDeck" prefHeight="400.0" prefWidth="100.0" />-->
+                    <!--</children>-->
+                <!--</VBox>-->
+            <!--</right>-->
+            <!--<left>-->
+                <!--<VBox prefHeight="400.0" prefWidth="100.0" BorderPane.alignment="CENTER">-->
+                    <!--<children>-->
+                        <!--<AnchorPane fx:id="PlayerLeftDeck" prefHeight="400.0" prefWidth="100.0" />-->
+                    <!--</children>-->
+                <!--</VBox>-->
+            <!--</left>-->
+        </BorderPane>
+    </children>
+</AnchorPane>

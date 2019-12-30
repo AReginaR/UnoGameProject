@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainScreenController">
+    <children>
+        <HBox layoutY="340.0" prefHeight="110.0" prefWidth="680.0">
+            <children>
+                <TextField fx:id="TextFieldUser" promptText="Имя">
+                    <HBox.margin>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+                    </HBox.margin>
+                </TextField>
+                <TextField fx:id="TextFieldAddress" promptText="Адрес" text="127.0.0.1">
+                    <HBox.margin>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+                    </HBox.margin>
+                </TextField>
+                <Button fx:id="ButtonJoin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                        onAction="#JoinButtonAction" prefHeight="27.0" prefWidth="73.0" text="Войти"
+                        textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <VBox prefHeight="340.0" prefWidth="680.0">
+            <children>
+                <ImageView fx:id="titleImage" fitHeight="340.0" fitWidth="680.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@images/uno.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
